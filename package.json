@@ -1,20 +1,26 @@
 {
-  "name": "ts-template",
+  "name": "apollo-server",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist && tsc",
+    "start": "npm run build && node dist/index.js",
     "lint": "npx prettier . --write",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\"",
+    "prepare": "husky"
   },
   "author": "",
   "license": "ISC",
   "description": "",
+  "engines": {
+    "node": ">=22.9.0"
+  },
   "devDependencies": {
     "@eslint/js": "^9.11.0",
     "@tsconfig/recommended": "^1.0.7",
     "@types/eslint__js": "^8.42.3",
     "eslint": "^9.11.0",
+    "husky": "^9.1.6",
     "prettier": "3.3.3",
     "typescript": "^5.6.2",
     "typescript-eslint": "^8.6.0"
